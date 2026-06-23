@@ -209,7 +209,7 @@ section{
     font-size:17px;
 }
 
-/* PRODUKTY PREMIUM */
+/* PRODUKTY */
 
 .products-premium{
     background:linear-gradient(180deg,#ffffff 0%,#f4f8fb 100%);
@@ -352,7 +352,7 @@ section{
 }
 
 .contact-box{
-    max-width:800px;
+    max-width:850px;
     margin:auto;
     background:white;
     padding:50px;
@@ -360,27 +360,46 @@ section{
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-.form-group{
-    margin-bottom:20px;
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-bottom:35px;
 }
 
-input,
-textarea{
-    width:100%;
-    padding:15px;
-    border:1px solid #dbe4ef;
-    border-radius:12px;
-    font-family:Poppins;
+.contact-item{
+    background:#f8fafc;
+    padding:24px;
+    border-radius:18px;
 }
 
-textarea{
-    min-height:150px;
-    resize:none;
+.contact-item strong{
+    display:block;
+    margin-bottom:8px;
+    color:var(--primary);
 }
 
-button{
-    border:none;
-    cursor:pointer;
+.contact-item a{
+    color:var(--secondary);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.company-data{
+    background:#f8fafc;
+    padding:28px;
+    border-radius:18px;
+    margin-bottom:30px;
+}
+
+.company-data h3{
+    margin-bottom:15px;
+}
+
+.contact-actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 /* STOPKA */
@@ -406,6 +425,10 @@ footer p{
     }
 
     .premium-products-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
         grid-template-columns:1fr;
     }
 
@@ -569,25 +592,51 @@ footer p{
 
     <div class="section-title">
         <h2>Kontakt</h2>
-        <p>Skontaktuj się z nami.</p>
+        <p>Masz pytania dotyczące produktów SmartVAC? Skontaktuj się z nami.</p>
     </div>
 
     <div class="contact-box">
-        <form>
-            <div class="form-group">
-                <input type="text" placeholder="Imię i nazwisko">
+
+        <div class="company-data">
+            <h3>K-TRADE Marta Kwaśniewska-Łotocka</h3>
+            <p>
+                ul. Przybosia 4/4<br>
+                59-220 Legnica<br>
+                NIP: PL6912228368
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-item">
+                <strong>📧 E-mail</strong>
+                <a href="mailto:kwasniewskatrade@gmail.com">kwasniewskatrade@gmail.com</a>
             </div>
 
-            <div class="form-group">
-                <input type="email" placeholder="Adres e-mail">
+            <div class="contact-item">
+                <strong>📱 WhatsApp</strong>
+                <a href="https://wa.me/48668148860">+48 668 148 860</a>
             </div>
 
-            <div class="form-group">
-                <textarea placeholder="Twoja wiadomość"></textarea>
+            <div class="contact-item">
+                <strong>📞 Telefon</strong>
+                <a href="tel:+48721065666">+48 721 065 666</a><br>
+                <a href="tel:+48668148860">+48 668 148 860</a>
             </div>
 
-            <button class="btn btn-primary">Wyślij wiadomość</button>
-        </form>
+            <div class="contact-item">
+                <strong>🕘 Godziny kontaktu</strong>
+                Poniedziałek – Piątek<br>
+                08:00 – 16:00
+            </div>
+
+        </div>
+
+        <div class="contact-actions">
+            <a href="mailto:kwasniewskatrade@gmail.com" class="btn btn-primary">Napisz e-mail</a>
+            <a href="https://wa.me/48668148860" class="btn btn-outline" style="color:#0f172a;border-color:#0f172a;">WhatsApp</a>
+        </div>
+
     </div>
 
 </div>
@@ -597,7 +646,7 @@ footer p{
 <div class="container">
     <div class="logo">SMART<span>VAC</span></div>
     <br>
-    <p>© 2026 SmartVAC. Wszelkie prawa zastrzeżone.</p>
+    <p>© 2026 SmartVAC | K-TRADE Marta Kwaśniewska-Łotocka</p>
 </div>
 </footer>
 
