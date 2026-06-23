@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
     --primary:#0f172a;
     --secondary:#00b8d9;
@@ -24,6 +23,10 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -44,7 +47,7 @@ header{
     top:0;
     width:100%;
     z-index:999;
-    background:rgba(255,255,255,.95);
+    background:rgba(255,255,255,.96);
     backdrop-filter:blur(10px);
     box-shadow:0 2px 15px rgba(0,0,0,.08);
 }
@@ -57,8 +60,10 @@ header{
 }
 
 .logo{
-    font-size:32px;
+    font-size:34px;
     font-weight:800;
+    letter-spacing:-1px;
+    color:var(--primary);
 }
 
 .logo span{
@@ -74,7 +79,7 @@ nav ul{
 nav a{
     text-decoration:none;
     color:var(--primary);
-    font-weight:500;
+    font-weight:600;
     transition:.3s;
 }
 
@@ -87,9 +92,7 @@ nav a:hover{
     display:flex;
     align-items:center;
     background:
-    linear-gradient(135deg,
-    rgba(15,23,42,.95),
-    rgba(15,23,42,.85)),
+    linear-gradient(135deg,rgba(15,23,42,.95),rgba(15,23,42,.82)),
     url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80');
     background-size:cover;
     background-position:center;
@@ -97,7 +100,8 @@ nav a:hover{
 }
 
 .hero-content{
-    max-width:700px;
+    max-width:760px;
+    padding-top:80px;
 }
 
 .hero h1{
@@ -121,7 +125,7 @@ nav a:hover{
     padding:15px 32px;
     text-decoration:none;
     border-radius:50px;
-    font-weight:600;
+    font-weight:700;
     transition:.3s;
 }
 
@@ -155,13 +159,17 @@ section{
 }
 
 .section-title h2{
-    font-size:42px;
+    font-size:46px;
     margin-bottom:15px;
+    color:var(--primary);
 }
 
 .section-title p{
     color:var(--gray);
+    font-size:18px;
 }
+
+/* O NAS */
 
 .about{
     background:var(--light);
@@ -176,155 +184,35 @@ section{
 
 .about-image{
     background:white;
-    border-radius:25px;
+    border-radius:28px;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:40px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    padding:50px;
+    box-shadow:0 20px 50px rgba(15,23,42,.08);
+    min-height:420px;
 }
-    .about-image img{
+
+.about-image img{
     width:100%;
-    max-width:500px;
+    max-width:480px;
     height:auto;
 }
 
 .about-text h3{
-    font-size:34px;
-    margin-bottom:20px;
+    font-size:36px;
+    margin-bottom:22px;
 }
 
 .about-text p{
     color:var(--gray);
+    font-size:17px;
 }
 
-.products-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
+/* PRODUKTY PREMIUM */
 
-.card{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card-icon{
-    font-size:45px;
-    margin-bottom:20px;
-}
-
-.product-image{
-    width:180px;
-    height:auto;
-    display:block;
-    margin:0 auto 20px auto;
-}
-
-.card h3{
-    margin-bottom:15px;
-}
-
-.card p{
-    color:var(--gray);
-}
-
-.features{
-    background:var(--primary);
-    color:white;
-}
-
-.features-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
-}
-
-.feature{
-    text-align:center;
-    padding:30px;
-}
-
-.feature h3{
-    margin:15px 0;
-}
-
-.contact{
-    background:var(--light);
-}
-
-.contact-box{
-    max-width:800px;
-    margin:auto;
-    background:white;
-    padding:50px;
-    border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.form-group{
-    margin-bottom:20px;
-}
-
-input,
-textarea{
-    width:100%;
-    padding:15px;
-    border:1px solid #dbe4ef;
-    border-radius:12px;
-    font-family:Poppins;
-}
-
-textarea{
-    min-height:150px;
-    resize:none;
-}
-
-button{
-    border:none;
-    cursor:pointer;
-}
-
-footer{
-    background:var(--dark);
-    color:white;
-    padding:40px 0;
-    text-align:center;
-}
-
-footer p{
-    opacity:.8;
-}
-
-@media(max-width:900px){
-
-.hero h1{
-    font-size:42px;
-}
-
-.about-grid{
-    grid-template-columns:1fr;
-}
-
-nav ul{
-    display:none;
-}
-
-}
 .products-premium{
     background:linear-gradient(180deg,#ffffff 0%,#f4f8fb 100%);
-}
-
-.premium-title h2{
-    font-size:48px;
-    color:var(--primary);
 }
 
 .premium-products-grid{
@@ -380,10 +268,6 @@ nav ul{
     object-fit:contain;
 }
 
-.premium-icon{
-    font-size:80px;
-}
-
 .product-label{
     display:inline-block;
     margin-bottom:12px;
@@ -423,6 +307,117 @@ nav ul{
 .premium-btn:hover{
     background:var(--secondary);
 }
+
+/* DLACZEGO */
+
+.features{
+    background:var(--primary);
+    color:white;
+}
+
+.features .section-title h2{
+    color:white;
+}
+
+.features .section-title p{
+    color:#cbd5e1;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.feature{
+    text-align:center;
+    padding:35px;
+    background:rgba(255,255,255,.06);
+    border-radius:24px;
+}
+
+.feature h1{
+    color:var(--secondary);
+    font-size:42px;
+}
+
+.feature h3{
+    margin:15px 0;
+}
+
+/* KONTAKT */
+
+.contact{
+    background:var(--light);
+}
+
+.contact-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #dbe4ef;
+    border-radius:12px;
+    font-family:Poppins;
+}
+
+textarea{
+    min-height:150px;
+    resize:none;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+/* STOPKA */
+
+footer{
+    background:var(--dark);
+    color:white;
+    padding:40px 0;
+    text-align:center;
+}
+
+footer p{
+    opacity:.8;
+}
+
+@media(max-width:900px){
+    .hero h1{
+        font-size:42px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .premium-products-grid{
+        grid-template-columns:1fr;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .btn-outline{
+        margin-left:0;
+        margin-top:15px;
+    }
+}
 </style>
 </head>
 
@@ -430,190 +425,180 @@ nav ul{
 
 <header>
 <div class="container navbar">
+    <div class="logo">SMART<span>VAC</span></div>
 
-<div class="logo">
-SMART<span>VAC</span>
-</div>
-
-<nav>
-<ul>
-<li><a href="#">Start</a></li>
-<li><a href="#about">O nas</a></li>
-<li><a href="#products">Produkty</a></li>
-<li><a href="#features">Dlaczego My</a></li>
-<li><a href="#contact">Kontakt</a></li>
-</ul>
-</nav>
-
+    <nav>
+        <ul>
+            <li><a href="#">Start</a></li>
+            <li><a href="#about">O nas</a></li>
+            <li><a href="#products">Produkty</a></li>
+            <li><a href="#features">Dlaczego My</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
 </div>
 </header>
 
 <section class="hero">
-
 <div class="container">
-
 <div class="hero-content">
+    <h1>Profesjonalna chemia dla domu i <span>AGD</span></h1>
 
-<h1>
-Profesjonalna chemia dla domu i <span>AGD</span>
-</h1>
+    <p>
+        Skuteczne środki czyszczące, odkamieniacze oraz preparaty pielęgnacyjne stworzone dla wymagających użytkowników.
+    </p>
 
-<p>
-Skuteczne środki czyszczące, odkamieniacze oraz preparaty pielęgnacyjne stworzone dla wymagających użytkowników.
-</p>
-
-<a href="#products" class="btn btn-primary">
-Poznaj produkty
-</a>
-
-<a href="#contact" class="btn btn-outline">
-Kontakt
-</a>
-
+    <a href="#products" class="btn btn-primary">Poznaj produkty</a>
+    <a href="#contact" class="btn btn-outline">Kontakt</a>
 </div>
-
 </div>
-
 </section>
 
 <section class="about" id="about">
-
 <div class="container">
-
 <div class="about-grid">
 
-<div class="about-image">
-    <img src="logo-smartvac.png" alt="SmartVAC Logo">
-</div>
+    <div class="about-image">
+        <img src="logo-smartvac.png" alt="SmartVAC Logo">
+    </div>
 
-<div class="about-text">
+    <div class="about-text">
+        <h3>Nowoczesna marka SmartVAC</h3>
 
-<h3>Nowoczesna marka SmartVAC</h3>
+        <p>
+            SmartVAC to marka profesjonalnych środków czyszczących przeznaczonych do codziennego użytkowania w domu, pielęgnacji urządzeń AGD, robotów sprzątających oraz odkurzaczy piorących.
+        </p>
 
-<p>
-SmartVAC to producent profesjonalnych środków czyszczących przeznaczonych do codziennego użytkowania w domu oraz pielęgnacji urządzeń AGD.
-</p>
+        <br>
 
-<br>
-
-<p>
-Nasze produkty wyróżniają się skutecznością, wysoką jakością składników oraz bezpieczeństwem stosowania.
-</p>
-
-</div>
+        <p>
+            Nasze produkty wyróżniają się skutecznością, wysoką jakością składników oraz bezpieczeństwem stosowania.
+        </p>
+    </div>
 
 </div>
-
 </div>
-
 </section>
 
 <section id="products" class="products-premium">
-
 <div class="container">
 
-<div class="section-title premium-title">
-<h2>Nasze Produkty</h2>
-<p>Profesjonalne rozwiązania SmartVAC do domu, AGD, robotów sprzątających oraz prania tapicerek.</p>
-</div>
+    <div class="section-title premium-title">
+        <h2>Nasze Produkty</h2>
+        <p>Profesjonalne rozwiązania SmartVAC do domu, AGD, robotów sprzątających oraz prania tapicerek.</p>
+    </div>
 
-<div class="premium-products-grid">
+    <div class="premium-products-grid">
 
-<div class="premium-card">
-<div class="premium-image-box">
-<img src="plyn-do-robotow.png" alt="SmartVAC smartCLEAN">
-</div>
-<span class="product-label">Roboty mopujące</span>
-<h3>SmartVAC smartCLEAN</h3>
-<p>Koncentrat do robotów mopujących, odkurzaczy myjących i powierzchni zmywalnych.</p>
-<a href="#contact" class="premium-btn">Zapytaj o produkt</a>
-</div>
+        <div class="premium-card featured">
+            <div class="premium-image-box">
+                <img src="plyn-do-robotow.png" alt="SmartVAC smartCLEAN">
+            </div>
+            <span class="product-label">Roboty mopujące</span>
+            <h3>SmartVAC smartCLEAN</h3>
+            <p>Koncentrat do robotów mopujących, odkurzaczy myjących i powierzchni zmywalnych.</p>
+            <a href="#contact" class="premium-btn">Zapytaj o produkt</a>
+        </div>
 
-<div class="premium-card">
-<div class="premium-image-box">
-<img src="calc-guard.jpg" alt="SmartVAC Calc Guard">
-</div>
-<span class="product-label">AGD</span>
-<h3>Calc Guard</h3>
-<p>Profesjonalny odkamieniacz do ekspresów, czajników, zmywarek i urządzeń AGD.</p>
-<a href="#contact" class="premium-btn">Zapytaj o produkt</a>
-</div>
+        <div class="premium-card">
+            <div class="premium-image-box">
+                <img src="calc-guard.jpg" alt="SmartVAC Calc Guard">
+            </div>
+            <span class="product-label">AGD</span>
+            <h3>Calc Guard</h3>
+            <p>Profesjonalny odkamieniacz do ekspresów, czajników, zmywarek i urządzeń AGD.</p>
+            <a href="#contact" class="premium-btn">Zapytaj o produkt</a>
+        </div>
 
-<div class="premium-card featured">
-<div class="premium-image-box">
-<img src="spot-clean.png" alt="SmartVAC Spotclean">
-</div>
-<span class="product-label">Tapicerki i dywany</span>
-<h3>SmartVAC Spotclean</h3>
-<p>Koncentrat do odkurzaczy typu Spot, odkurzaczy piorących, dywanów i tapicerek.</p>
-<a href="#contact" class="premium-btn">Zapytaj o produkt</a>
-</div>
+        <div class="premium-card">
+            <div class="premium-image-box">
+                <img src="spot-clean.png" alt="SmartVAC Spotclean">
+            </div>
+            <span class="product-label">Tapicerki i dywany</span>
+            <h3>SmartVAC Spotclean</h3>
+            <p>Koncentrat do odkurzaczy typu Spot, odkurzaczy piorących, dywanów i tapicerek.</p>
+            <a href="#contact" class="premium-btn">Zapytaj o produkt</a>
+        </div>
 
-
-</div>
-
-</div>
+    </div>
 
 </div>
+</section>
 
+<section class="features" id="features">
+<div class="container">
+
+    <div class="section-title">
+        <h2>Dlaczego SmartVAC?</h2>
+        <p>Jakość, skuteczność i nowoczesne rozwiązania.</p>
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature">
+            <h1>✓</h1>
+            <h3>Skuteczność</h3>
+            <p>Sprawdzone receptury i wysoka wydajność.</p>
+        </div>
+
+        <div class="feature">
+            <h1>✓</h1>
+            <h3>Bezpieczeństwo</h3>
+            <p>Produkty tworzone z myślą o bezpieczeństwie urządzeń i powierzchni.</p>
+        </div>
+
+        <div class="feature">
+            <h1>✓</h1>
+            <h3>Nowoczesność</h3>
+            <p>Preparaty dopasowane do współczesnych urządzeń domowych.</p>
+        </div>
+
+        <div class="feature">
+            <h1>✓</h1>
+            <h3>Jakość Premium</h3>
+            <p>Starannie dobrane składniki i profesjonalny charakter produktów.</p>
+        </div>
+
+    </div>
+
+</div>
 </section>
 
 <section class="contact" id="contact">
-
 <div class="container">
 
-<div class="section-title">
+    <div class="section-title">
+        <h2>Kontakt</h2>
+        <p>Skontaktuj się z nami.</p>
+    </div>
 
-<h2>Kontakt</h2>
+    <div class="contact-box">
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Imię i nazwisko">
+            </div>
 
-<p>Skontaktuj się z nami.</p>
+            <div class="form-group">
+                <input type="email" placeholder="Adres e-mail">
+            </div>
 
-</div>
+            <div class="form-group">
+                <textarea placeholder="Twoja wiadomość"></textarea>
+            </div>
 
-<div class="contact-box">
-
-<form>
-
-<div class="form-group">
-<input type="text" placeholder="Imię i nazwisko">
-</div>
-
-<div class="form-group">
-<input type="email" placeholder="Adres e-mail">
-</div>
-
-<div class="form-group">
-<textarea placeholder="Twoja wiadomość"></textarea>
-</div>
-
-<button class="btn btn-primary">
-Wyślij wiadomość
-</button>
-
-</form>
+            <button class="btn btn-primary">Wyślij wiadomość</button>
+        </form>
+    </div>
 
 </div>
-
-</div>
-
 </section>
 
 <footer>
-
 <div class="container">
-
-<div class="logo">
-SMART<span>VAC</span>
+    <div class="logo">SMART<span>VAC</span></div>
+    <br>
+    <p>© 2026 SmartVAC. Wszelkie prawa zastrzeżone.</p>
 </div>
-
-<br>
-
-<p>
-© 2026 SmartVAC. Wszelkie prawa zastrzeżone.
-</p>
-
-</div>
-
 </footer>
 
 </body>
