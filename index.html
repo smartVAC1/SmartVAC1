@@ -175,9 +175,18 @@ section{
 }
 
 .about-image{
-    background:linear-gradient(135deg,var(--secondary),#3b82f6);
-    height:450px;
+    background:white;
     border-radius:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+    .about-image img{
+    width:100%;
+    max-width:500px;
+    height:auto;
 }
 
 .about-text h3{
@@ -473,7 +482,9 @@ Kontakt
 
 <div class="about-grid">
 
-<div class="about-image"></div>
+<div class="about-image">
+    <img src="logo-smartvac.png" alt="SmartVAC Logo">
+</div>
 
 <div class="about-text">
 
